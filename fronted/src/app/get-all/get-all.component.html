@@ -1,0 +1,16 @@
+
+<div class="container">
+    <section id="allBooksSection">
+       <h2>Get all Books</h2>
+       <button (click)="getAllBooks()">Get all the books</button>
+       <ul id="allBookList">
+        <li *ngFor="let book of books">
+            <p><strong>ID:</strong> {{ book._id }}</p>
+            <p><strong>Title:</strong> {{ book.Title }}</p>
+            <p><strong>ISBN:</strong> {{ book.ISBN }}</p>
+            <p><strong>Summary:</strong> {{ book.Summary }}</p>
+            <p><strong>Author:</strong> {{ book.Author }}</p>
+          </li>
+       </ul>
+    </section>
+</div>

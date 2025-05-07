@@ -1,0 +1,16 @@
+#allBookList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #allBookList li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  #allBookList p {
+    margin: 0.3rem 0;
+  }
+  
