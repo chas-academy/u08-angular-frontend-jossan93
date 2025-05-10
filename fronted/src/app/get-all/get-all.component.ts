@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { BooksService } from '../books.service';
+import { Book } from '../models/books.model';
 
 @Component({
   selector: 'app-get-all',
@@ -12,20 +14,18 @@ import { CommonModule } from '@angular/common';
 })
 export class GetAllComponent implements OnInit {
 
-  books: any[] = [];
+  books: Book[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {}
 
   getAllBooks(): void {
     console.log('Fetching books...');
-    this.http.get<any[]>('https://u05-restful-api-jossan93.onrender.com/api/books/')
-      .subscribe({
-        next: (data) => this.books = data,
-        error: (err) => console.error('API error', err)
-      });
+    this.booksService.getAllBooks().subscribe({
+      next: (data) => this.books = data,
+      error: (err) => console.error('API error', err)
+    });
   }
-
 }
 
