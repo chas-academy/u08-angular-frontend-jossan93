@@ -8,11 +8,15 @@ import { Observable } from 'rxjs';
 })
 export class BooksService {
 
-    private apiUrl = 'https://u05-restful-api-jossan93.onrender.com/api/books/';
-  
-    constructor(private http: HttpClient) {}
-  
-    getAllBooks(): Observable<Book[]> {
-      return this.http.get<Book[]>(this.apiUrl);
+  private baseUrl = 'https://u05-restful-api-jossan93.onrender.com/api/books';
+
+  constructor(private http: HttpClient) {}
+
+  getAllBooks(): Observable<Book[]> {
+    return this.http.get<Book[]>(`${this.baseUrl}`);
+  }
+
+  getOneById(id: string): Observable<Book> {
+    return this.http.get<Book>(`${this.baseUrl}/${id}`);
   }
 }

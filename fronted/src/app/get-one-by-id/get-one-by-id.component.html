@@ -1,1 +1,17 @@
-<p>get-one-by-id works!</p>
+<div class="container">
+    <h2>Find a book by id</h2>
+    <section id="idgetById">
+        <form (ngSubmit)="getbyid()">
+            <label for="id">Put id Here:</label><br>
+            <input type="text" [(ngModel)]="bookId" name="id" required>
+            <button type="submit">Find</button>
+        </form>
+    </section>
+    <section *ngIf="book">
+        <h3>Here is the book</h3>
+        <p><strong>Title:</strong> {{ book.Title }}</p>
+        <p><strong>ISBN:</strong> {{ book.ISBN }}</p>
+        <p><strong>Summary:</strong> {{ book.Summary }}</p>
+        <p><strong>Author:</strong> {{ book.Author }}</p>
+    </section>
+</div>
