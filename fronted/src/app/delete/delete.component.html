@@ -1,1 +1,30 @@
-<p>delete works!</p>
+<div class="container">
+    <h2>Delete a book via id</h2>
+    <section id="deleteSectionID">
+        <div *ngIf="successMessage" class="success">
+        {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error">
+        {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="deleteBook()">
+            <label for="id">Put id Here to delete book:</label><br>
+            <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+
+            <label for="deleteTitle">Title:</label><br>
+            <input type="text" [(ngModel)]="delete.Title" name="deleteTitle" required>
+
+            <label for="deleteISBN">ISBN:</label><br>
+            <input type="number" [(ngModel)]="delete.ISBN" name="deleteISBN" required>
+
+            <label for="deleteSummary">Summary:</label><br>
+            <input type="text" [(ngModel)]="delete.Summary" name="deleteSummary" required>
+
+            <label for="deleteAuthor">Author:</label><br>
+            <input type="text" [(ngModel)]="delete.Author" name="deleteAuthor" required>
+
+            <button type="submit">delete book</button>
+        </form>
+    </section>
+</div>
