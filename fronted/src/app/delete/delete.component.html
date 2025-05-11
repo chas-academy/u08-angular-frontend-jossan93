@@ -9,21 +9,30 @@
         </div>
 
         <form (ngSubmit)="deleteBook()">
-            <label for="id">Put id Here to delete book:</label><br>
-            <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+            <div class="form-row">
+                <label for="id">Put ID here:</label>
+                <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+            </div>
 
-            <label for="deleteTitle">Title:</label><br>
-            <input type="text" [(ngModel)]="delete.Title" name="deleteTitle" required>
+            <div class="form-row">
+                <label for="deleteTitle">Title:</label>
+                <input type="text" [(ngModel)]="delete.Title" name="deleteTitle" required>
+            </div>
 
-            <label for="deleteISBN">ISBN:</label><br>
-            <input type="number" [(ngModel)]="delete.ISBN" name="deleteISBN" required>
+            <div class="form-row">
+                <label for="deleteISBN">ISBN:</label>
+                <input type="number" [(ngModel)]="delete.ISBN" name="deleteISBN" required>
+            </div>
 
-            <label for="deleteSummary">Summary:</label><br>
-            <input type="text" [(ngModel)]="delete.Summary" name="deleteSummary" required>
+            <div class="form-row">
+                <label for="deleteSummary">Summary:</label>
+                <textarea [(ngModel)]="delete.Summary" name="deleteSummary" required></textarea>
+            </div>
 
-            <label for="deleteAuthor">Author:</label><br>
-            <input type="text" [(ngModel)]="delete.Author" name="deleteAuthor" required>
-
+            <div class="form-row">
+                <label for="deleteAuthor">Author:</label>
+                <input type="text" [(ngModel)]="delete.Author" name="deleteAuthor" required>
+            </div>
             <button type="submit">delete book</button>
         </form>
     </section>

@@ -9,20 +9,30 @@
         </div>
 
         <form (ngSubmit)="updateBook()">
-            <label for="id">Put id Here to get the book for updating:</label><br>
-            <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+            <div class="form-row">
+                <label for="id">Put ID here:</label>
+                <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+            </div>
 
-            <label for="updateTitle">Title:</label><br>
-            <input type="text" [(ngModel)]="update.Title" name="updateTitle" required>
+            <div class="form-row">
+                <label for="updateTitle">Title:</label>
+                <input type="text" [(ngModel)]="update.Title" name="updateTitle" required>
+            </div>
 
-            <label for="updateISBN">ISBN:</label><br>
-            <input type="number" [(ngModel)]="update.ISBN" name="updateISBN" required>
+            <div class="form-row">
+                <label for="updateISBN">ISBN:</label>
+                <input type="number" [(ngModel)]="update.ISBN" name="updateISBN" required>
+            </div>
 
-            <label for="updateSummary">Summary:</label><br>
-            <input type="text" [(ngModel)]="update.Summary" name="updateSummary" required>
+            <div class="form-row">
+                <label for="updateSummary">Summary:</label>
+                <textarea [(ngModel)]="update.Summary" name="updateSummary" required></textarea>
+            </div>
 
-            <label for="updateAuthor">Author:</label><br>
-            <input type="text" [(ngModel)]="update.Author" name="updateAuthor" required>
+            <div class="form-row">
+                <label for="updateAuthor">Author:</label>
+                <input type="text" [(ngModel)]="update.Author" name="updateAuthor" required>
+            </div>
 
             <button type="submit">update book</button>
         </form>

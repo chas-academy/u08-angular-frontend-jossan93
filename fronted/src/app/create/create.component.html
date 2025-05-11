@@ -2,17 +2,25 @@
     <h2>Add a book to the list</h2>
     <section id="createSectionID">
         <form (ngSubmit)="create()">
-            <label for="createTitle">Title:</label><br>
-            <input type="text" [(ngModel)]="newBook.Title" name="createTitle" required>
+            <div class="form-row">
+                <label for="createTitle">Title:</label>
+                <input type="text" [(ngModel)]="newBook.Title" name="createTitle" required>
+            </div>
 
-            <label for="createISBN">ISBN:</label><br>
-            <input type="number" [(ngModel)]="newBook.ISBN" name="createISBN" required>
+            <div class="form-row">
+                <label for="createISBN">ISBN:</label>
+                <input type="number" [(ngModel)]="newBook.ISBN" name="createISBN" required>
+            </div>
 
-            <label for="createSummary">Summary:</label><br>
-            <input type="text" [(ngModel)]="newBook.Summary" name="createSummary" required>
+            <div class="form-row">
+                <label for="createSummary">Summary:</label>
+                <textarea [(ngModel)]="newBook.Summary" name="createSummary" required></textarea>
+            </div>
 
-            <label for="createAuthor">Author:</label><br>
-            <input type="text" [(ngModel)]="newBook.Author" name="createAuthor" required>
+            <div class="form-row">
+                <label for="createAuthor">Author:</label>
+                <input type="text" [(ngModel)]="newBook.Author" name="createAuthor" required>
+            </div>
 
             <button type="submit">Add book to list</button>
         </form>
