@@ -27,7 +27,7 @@ export class BooksService {
   updateBook(id: string, book: Book): Observable<Book> {
     return this.http.put<Book>(`${this.baseUrl}/update/${id}`, book);
   }
-
+  
   deleteBook(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/delete/${id}`);
   }

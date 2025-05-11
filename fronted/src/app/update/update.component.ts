@@ -31,7 +31,7 @@ export class UpdateComponent {
         this.update = { ...book };
       },
       error: () => {
-        alert('Book not found');
+        this.errorMessage = 'Book not found';
         this.update = {
           _id: '',
           Title: '',

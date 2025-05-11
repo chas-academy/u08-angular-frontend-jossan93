@@ -18,7 +18,9 @@ export class GetAllComponent implements OnInit {
 
   constructor(private booksService: BooksService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getAllBooks();
+  }
 
   getAllBooks(): void {
     console.log('Fetching books...');

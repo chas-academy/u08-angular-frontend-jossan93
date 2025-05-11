@@ -1,4 +1,4 @@
-import { Component, createComponent } from '@angular/core';
+import { Component} from '@angular/core';
 import { GetAllComponent } from '../get-all/get-all.component';
 import { GetOneByIDComponent } from '../get-one-by-id/get-one-by-id.component';
 import { CreateComponent } from '../create/create.component';

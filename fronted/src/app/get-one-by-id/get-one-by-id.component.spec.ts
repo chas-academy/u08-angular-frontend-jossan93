@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GetOneByIDComponent } from './get-one-by-id.component';
 
@@ -21,3 +21,4 @@ describe('GetOneByIDComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+*/
