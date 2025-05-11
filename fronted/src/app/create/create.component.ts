@@ -14,7 +14,7 @@ import { BooksService } from '../books.service';
 export class CreateComponent {
     newBook: Book = {
     Title: '',
-    ISBN: 0,
+    ISBN: null as unknown as number,
     Summary: '',
     Author: ''
   };
@@ -36,7 +36,7 @@ export class CreateComponent {
   this.booksService.createBook(bookToSend).subscribe({
     next: () => {
       this.successMessage = 'Book has been added.';
-      this.newBook = { Title: '', ISBN: 0, Summary: '', Author: '' }; // Rensa formulär
+      this.newBook = { Title: '', ISBN: undefined, Summary: '', Author: '' }; // Rensa formulär
     },
     error: (err) => {
       console.error('Error creating book', err);

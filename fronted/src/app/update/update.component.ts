@@ -16,7 +16,7 @@ export class UpdateComponent {
   update: Book = {
     _id: '',
     Title: '',
-    ISBN: 0,
+    ISBN: null as unknown as number,
     Summary: '',
     Author: ''
   };
@@ -35,7 +35,7 @@ export class UpdateComponent {
         this.update = {
           _id: '',
           Title: '',
-          ISBN: 0,
+          ISBN: null as unknown as number,
           Summary: '',
           Author: ''
         };
@@ -63,7 +63,7 @@ export class UpdateComponent {
         this.update = {
           _id: '',
           Title: '',
-          ISBN: 0,
+          ISBN: null as unknown as number,
           Summary: '',
           Author: ''
         };

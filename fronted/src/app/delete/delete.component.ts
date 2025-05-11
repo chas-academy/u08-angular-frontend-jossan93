@@ -15,7 +15,7 @@ export class DeleteComponent {
   delete: Book = {
     _id: '',
     Title: '',
-    ISBN: 0,
+    ISBN: null as unknown as number,
     Summary: '',
     Author: ''
   };
@@ -34,7 +34,7 @@ export class DeleteComponent {
         this.delete = {
           _id: '',
           Title: '',
-          ISBN: 0,
+          ISBN: null as unknown as number,
           Summary: '',
           Author: ''
         };
@@ -61,7 +61,7 @@ export class DeleteComponent {
         this.delete = {
           _id: '',
           Title: '',
-          ISBN: 0,
+          ISBN: null as unknown as number,
           Summary: '',
           Author: ''
         };
