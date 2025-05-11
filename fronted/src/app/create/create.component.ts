@@ -21,18 +21,26 @@ export class CreateComponent {
 
   constructor(private booksService: BooksService) {}
 
-create(): void {
-  const bookToSend = {
-    ...this.newBook,
-    ISBN: Number(this.newBook.ISBN)  // ✅ konvertera ISBN till number
-  };
+  successMessage: string = '';
+  errorMessage: string = '';
+
+  create(): void {
+    this.successMessage = '';
+    this.errorMessage = '';
+
+    const bookToSend = {
+      ...this.newBook,
+      ISBN: Number(this.newBook.ISBN)  // ✅ konvertera ISBN till number
+    };
 
   this.booksService.createBook(bookToSend).subscribe({
     next: () => {
+      this.successMessage = 'Book has been added.';
       this.newBook = { Title: '', ISBN: 0, Summary: '', Author: '' }; // Rensa formulär
     },
     error: (err) => {
       console.error('Error creating book', err);
+      this.errorMessage = 'Adding book has failed check input or networkerror.';
     }
   });
 }

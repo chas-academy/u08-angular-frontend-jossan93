@@ -1,6 +1,13 @@
 <div class="container">
     <h2>Add a book to the list</h2>
     <section id="createSectionID">
+        <div *ngIf="successMessage" class="success">
+        {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error">
+        {{ errorMessage }}
+        </div>
+        
         <form (ngSubmit)="create()">
             <div class="form-row">
                 <label for="createTitle">Title:</label>
