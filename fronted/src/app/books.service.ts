@@ -24,4 +24,8 @@ export class BooksService {
     return this.http.post<Book>(`${this.baseUrl}/createBook`, book);
   }
 
+  updateBook(id: string, book: Book): Observable<Book> {
+    return this.http.put<Book>(`${this.baseUrl}/update/${id}`, book);
+  }
+
 }

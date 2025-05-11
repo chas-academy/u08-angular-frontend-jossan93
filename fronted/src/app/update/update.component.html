@@ -1,1 +1,31 @@
-<p>update works!</p>
+<div class="container">
+    <h2>Update a book via id</h2>
+    <section id="updateSectionID">
+        <div *ngIf="successMessage" class="success">
+        {{ successMessage }}
+        </div>
+        <div *ngIf="errorMessage" class="error">
+        {{ errorMessage }}
+        </div>
+
+        <form (ngSubmit)="updateBook()">
+            <label for="id">Put id Here to get the book for updating:</label><br>
+            <input type="text" [(ngModel)]="bookId" name="id" (blur)="fetchBook()" required>
+
+            <label for="updateTitle">Title:</label><br>
+            <input type="text" [(ngModel)]="update.Title" name="updateTitle" required>
+
+            <label for="updateISBN">ISBN:</label><br>
+            <input type="number" [(ngModel)]="update.ISBN" name="updateISBN" required>
+
+            <label for="updateSummary">Summary:</label><br>
+            <input type="text" [(ngModel)]="update.Summary" name="updateSummary" required>
+
+            <label for="updateAuthor">Author:</label><br>
+            <input type="text" [(ngModel)]="update.Author" name="updateAuthor" required>
+
+            <button type="submit">update book</button>
+        </form>
+    </section>
+</div>
+
