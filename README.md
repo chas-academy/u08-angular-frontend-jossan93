@@ -5,7 +5,8 @@ En enkel Angular-applikation som hanterar böcker via ett REST API. Användaren 
 
 ## Installation
 Klona projektet:
-git clone https://github.com/chas-academy/u08-angular-frontend-jossan93
+
+> git clone https://github.com/chas-academy/u08-angular-frontend-jossan93
 
 ## Installera:
 > npm install
@@ -142,3 +143,5 @@ Utöver dina komponenter innehåller projektet även de vanliga Angular-filerna:
 - Kodstandarden följer Angulars best practices – håll dig till typning och modulerat ansvar.
 
 ## Länk till deployad version
+
+[deployad version](u08angularjossan93.netlify.app)
